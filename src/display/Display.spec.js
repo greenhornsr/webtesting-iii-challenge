@@ -5,7 +5,7 @@ import {render} from '@testing-library/react';
 import '@testing-library/react/cleanup-after-each';
 
 
-describe.skip('<Display />', () => {
+describe('<Display />', () => {
     it('displays if gate is open with green-led, if it is unlocked with green-led', () => {
         const { queryByText } = render(<Display />)
         const lockedStatus = queryByText(/Unlocked/i)

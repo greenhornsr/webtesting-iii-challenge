@@ -15,6 +15,7 @@ describe('Controls Component', () => {
 
         expect(button).toBeTruthy()
         expect(button2).toBeTruthy()
+        // the closed toggle button is disabled if the gate is locked
         expect(button2.disabled).toBeTruthy()
         fireEvent.click(button)
         expect(spy).toHaveBeenCalled()
@@ -53,6 +54,7 @@ describe('Controls Component', () => {
         const button2 = queryByText(/Close Gate/i)
 
         expect(button).toBeTruthy()
+        // the locked toggle button is disabled if the gate is open
         expect(button.disabled).toBeTruthy()
         expect(button2).toBeTruthy()
         fireEvent.click(button2)
@@ -70,12 +72,12 @@ describe('Controls Component', () => {
     // });
 });
 
-describe.skip('Gate', () => {
-    it.todo('defaults to unlocked and open', () => {
+// describe.skip('Gate', () => {
+//     it.todo('defaults to unlocked and open', () => {
 
-    });
-    it.todo('cannot be closed or opened if it is locked', () => {
+//     });
+//     it.todo('cannot be closed or opened if it is locked', () => {
 
-    });
+//     });
 
-});
+// });
